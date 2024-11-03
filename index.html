@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summit Valley College LMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <div class="logo">
+                    <img src="assets/logo-no-background.png" width="50px" height="50px" alt="Summit Valley College Logo">
+                    <h1>Summit Valley College LMS</h1>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="javascript:void(0);" onclick="togglePopup('courses-popup')">Courses</a></li>
+                        <li><a href="javascript:void(0);" onclick="togglePopup('profile-popup')">Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="welcome">
+                <h2>Welcome, John!</h2>
+                <p>Explore your courses and stay updated on the latest announcements.</p>
+            </div>
+
+            <div class="cards">
+                <!-- Courses Section -->
+                <div class="card">
+                    <h3>My Courses</h3>
+                    <ul class="courses">
+                        <li>Intro to Computer Science</li>
+                        <li>Database Management Systems</li>
+                        <li>Operating Systems</li>
+                        <li>Web Development</li>
+                    </ul>
+                    <a href="#" class="view-all">View All Courses</a>
+                </div>
+
+                <!-- Announcements Section -->
+                <div class="card">
+                    <h3>Latest Announcements</h3>
+                    <ul class="announcements">
+                        <li>Exam Schedule Released for Fall 2024</li>
+                        <li>Web Development Project Deadline Extended</li>
+                        <li>CS Lab Opens 24/7 During Finals Week</li>
+                    </ul>
+                    <a href="#" class="view-all">View All Announcements</a>
+                </div>
+
+                <!-- Profile Overview -->
+                <div class="card profile">
+                    <h3>Profile Overview</h3>
+                    <img src="assets/headshot.jpg" width="150px" height="150px" alt="Profile Picture" class="profile-pic">
+                    <p>Name: John Doe</p>
+                    <p>Student ID: 20241234</p>
+                    <p>Major: Computer Science</p>
+                    <a href="#" class="view-profile">View Full Profile</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Courses Pop-Up -->
+    <div id="courses-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="togglePopup('courses-popup')">&times;</span>
+            <h3>My Courses</h3>
+            <ul class="courses">
+                <li>Intro to Computer Science</li>
+                <li>Database Management Systems</li>
+                <li>Operating Systems</li>
+                <li>Web Development</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Profile Pop-Up -->
+    <div id="profile-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="togglePopup('profile-popup')">&times;</span>
+            <h3>Profile Overview</h3>
+            <img src="assets/headshot.jpg" width="150px" height="150px" alt="Profile Picture" class="profile-pic">
+            <p>Name: John Doe</p>
+            <p>Student ID: 20241234</p>
+            <p>Major: Computer Science</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Summit Valley College. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
